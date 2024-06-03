@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    margin: 0;
+}
+
+.progress-bar {
+    width: 500px;
+    height: 60px;
+    box-shadow: 0 0 10px #fff;
+    padding: 10px;
+    border: 1px solid #fff;
+}
+
+.progress-bar__inside {
+    height: 100%;
+    width: 70%;
+    background: linear-gradient(to bottom, #FFD700, #FFA500);
+    box-shadow: 0 0 18px rgb(255, 145, 0);
+}
