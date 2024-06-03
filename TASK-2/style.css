@@ -1,0 +1,174 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+}
+
+.container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 24px;
+}
+
+.header__tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.header__tab {
+  color: #aaa;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.header__tab:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+}
+
+.violations {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.violations__chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #cfb6e1 0% 32%,
+    #86b4e9 32% 62%,
+    #7fc28c 62% 79%,
+    #eea064 79% 87%,
+    #de6d6d 87% 91%,
+    #ffdc7d 91% 100%
+  );
+}
+
+.violations__chart::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.violations__total {
+  position: absolute;
+  font-size: 18px;
+  z-index: 1;
+}
+
+.violations__text {
+  font-size: 12px;
+  color: #9f9f9f;
+  z-index: 1;
+  margin-top: 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  position: relative;
+  margin: 10px 0;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: -2px;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+li:first-child::before {
+  background-color: #cfb6e1;
+  border: 2px solid #b78cd8;
+}
+
+.percent_one {
+  color: #cfb6e1;
+}
+
+li:nth-child(2)::before {
+  background-color: #86b4e9;
+  border: 2px solid #488ddd;
+}
+
+.percent_two {
+  color: #86b4e9;
+}
+
+li:nth-child(3)::before {
+  background-color: #7fc28c;
+  border: 2px solid #42a658;
+}
+
+.percent_three {
+  color: #7fc28c;
+}
+
+li:nth-child(4)::before {
+  background-color: #eea064;
+  border: 2px solid #ed7432;
+}
+
+.percent_four {
+  color: #eea064;
+}
+
+li:nth-child(5)::before {
+  background-color: #de6d6d;
+  border: 2px solid #de1a2b;
+}
+
+.percent_five {
+  color: #de6d6d;
+}
+
+li:nth-child(6)::before {
+  background-color: #ffdc7d;
+  border: 2px solid #fdca41;
+}
+
+.percent_six {
+  color: #ffdc7d;
+}
+
+.violations__stat {
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.violations__stat-more {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.amount,
+.percent {
+  font-weight: bold;
+}
