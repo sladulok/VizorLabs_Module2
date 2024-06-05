@@ -1,0 +1,225 @@
+form {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  padding: 30px;
+  min-width: 910px;
+}
+
+.form__checkbox {
+  grid-area: 1 / 1 / 2 / 2;
+  border: 0px;
+  padding: 0;
+}
+
+.form__checkbox-second {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.form__sesction {
+  display: grid;
+  margin-bottom: 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.form__container {
+  grid-area: 1 / 2 / 2 / 5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-width: 520px;
+}
+
+.form__container-second {
+  grid-area: 2 / 2 / 3 / 5;
+}
+
+.form__info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+}
+
+.form__title {
+  margin: 5px;
+  font-size: 14px;
+}
+
+.form__container-title {
+  color: #ccc;
+}
+
+/* кнопка "камеры и объекты" */
+.form__container-btn {
+  background-color: #fff;
+  border: 2px solid #5394eb;
+  color: #5394eb;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.form__container-btn:hover {
+  background-color: #5394eb;
+  border-color: #fff;
+  color: #fff;
+}
+/*  конец кнопки "камеры и объекты" */
+
+.form__container-txt {
+  color: #ccc;
+}
+
+.form__container-txt-more {
+  font-weight: bold;
+}
+
+.form__switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+  margin-left: 5px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider {
+  border-radius: 34px;
+}
+
+.slider:before {
+  border-radius: 50%;
+}
+
+/* начало расписания */
+.form__info-days {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.form__info-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  min-height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.form__info-day:hover {
+  background-color: #aba9a9;
+}
+
+.form__info-day input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.form__time {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0px 20px 3px;
+}
+
+legend {
+  color: #a6a6a6;
+  font-size: 12px;
+}
+
+.form__info-time {
+  border: 0;
+}
+/* конец расписания */
+
+/* мусорка */
+.trash-icon {
+  grid-area: 2 / 5 / 3 / 6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #ccc;
+}
+
+.trash-icon:hover {
+  transform: scale(1.1);
+}
+
+/* календарь */
+.form__add-btn {
+  grid-area: 3 / 2 / 4 / 3;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #fff;
+  color: #139632;
+  border: 1px solid #139632;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: auto;
+  font-size: 12px;
+}
+
+.form__add-btn:hover {
+  background-color: #139632;
+  color: #fff;
+}
+
+.calendar-icon {
+  fill: #139632;
+}
+
+.form__add-btn:hover .calendar-icon {
+  fill: #fff;
+}
